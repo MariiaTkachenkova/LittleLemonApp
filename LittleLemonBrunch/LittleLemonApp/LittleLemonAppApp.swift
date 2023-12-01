@@ -11,7 +11,10 @@ import SwiftUI
 struct LittleLemonAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Onboarding()
         }
     }
+    init() {
+            UserDefaults.standard.set(true, forKey: "com.apple.CoreData.SQLDebug")
+        }
 }
